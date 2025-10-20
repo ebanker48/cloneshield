@@ -1,6 +1,6 @@
-# CloneShield — Simple Clone Website Scanner (v3.1)
+# CloneShield — Streamlit (No dnstwist version)
 
-Detect spoofed or cloned websites by scanning for registered lookalikes (via dnstwist) and comparing HTML similarity.
+Detect spoofed or cloned websites by generating lookalike domains in pure Python and comparing HTML similarity.
 
 ## Deploy on Streamlit Cloud
 1. Create a **public GitHub repo** and add:
@@ -8,9 +8,9 @@ Detect spoofed or cloned websites by scanning for registered lookalikes (via dns
    - requirements.txt
    - runtime.txt
 2. Go to https://streamlit.io/cloud → Deploy an app → select your repo → entry file = `app.py`.
-3. Done! Streamlit Cloud will build and host your app automatically.
+3. Streamlit Cloud will build and host your app automatically.
 
-## Run locally (Mac/Windows/Linux)
+## Run locally
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
