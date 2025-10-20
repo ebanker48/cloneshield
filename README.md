@@ -1,23 +1,19 @@
-# Simple Clone Scanner — v3 (No Password, PDF Exports, History)
+# CloneShield — Simple Clone Website Scanner (v3.1)
 
-**What it does:** paste domains → scans for registered lookalikes (dnstwist) → flags HTML-similar pages → shows results and saves to history. Now includes **PDF exports** for current results and full history.
+Detect spoofed or cloned websites by scanning for registered lookalikes (via dnstwist) and comparing HTML similarity.
 
-## Deploy on Streamlit Community Cloud (recommended)
+## Deploy on Streamlit Cloud
 1. Create a **public GitHub repo** and add:
-   - `app.py`
-   - `requirements.txt`
-2. Go to https://streamlit.io/cloud → **Deploy an app** → connect your repo → entry file = `app.py`.
-3. Done. You have a cloud HTTPS URL.
+   - app.py
+   - requirements.txt
+   - runtime.txt
+2. Go to https://streamlit.io/cloud → Deploy an app → select your repo → entry file = `app.py`.
+3. Done! Streamlit Cloud will build and host your app automatically.
 
 ## Run locally (Mac/Windows/Linux)
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-## Notes
-- History saves to `history.csv` in the working directory.
-- This MVP uses **HTML text similarity**; raise the threshold for fewer false positives.
-- Streamlit Cloud does not run background jobs; to automate nightly scans, use an external scheduler (e.g., GitHub Actions calling a webhook) or run this locally on a schedule. I can wire that up if you want.
